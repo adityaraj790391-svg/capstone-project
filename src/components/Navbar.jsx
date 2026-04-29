@@ -10,7 +10,7 @@ import { MdOutlineVideoCall } from "react-icons/md";
 
 const Navbar = () => {
   return (
-    <div className='flex justify-between px-5 py-2 fixed top-0 w-full bg-white'>
+    <div className='flex justify-between px-5 py-2 fixed top-0 w-full bg-white z-50'>
         <div className='flex items-center space-x-4'>
           <IoIosMenu className='text-2xl cursor-pointer'/>
           <img className = 'h-8 w-30 cursor-pointer' src={logo} alt=''></img>
@@ -18,7 +18,7 @@ const Navbar = () => {
 
         <div className='flex h-11 w-[39%]'>
           <div className='w-full border rounded-l-full px-3 py-2'>
-            <input className='w-full h-full outline-none' type='text' placeholder='Search'></input>
+            <input className='w-full h-full outline-none py-2 px-2' type='text' placeholder='Search'></input>
           </div>
           <button className='px-4 py-2 border bg-gray-200 rounded-r-full cursor-pointer hover:bg-gray-200 h-full'><CiSearch /></button>
           <div>

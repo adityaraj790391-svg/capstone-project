@@ -8,18 +8,22 @@ export default function AuthProvider({children}) {
     const [data, setdata] = useState([]);
     const [value, setvalue] = useState('New');
 
-    useEffect(() => {
-        fetchAllData(value);
-    }, [value]);
-
     const fetchAllData = (query) => {
         setloading(true);
         fetchData(`search/?q=${query}`).then(({contents}) => {
             console.log(contents);
             setdata(contents);
             setloading(false);
-        });
+        })
+        .catch((error) => {
+          console.error("API Error:", error);
+          setloading(false);
+      });
     };
+
+    useEffect(() => {
+        fetchAllData(value);
+    }, [value]);
 
     return (
     <AuthContext.Provider value={{ loading, data, value, setvalue }}>

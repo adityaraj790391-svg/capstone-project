@@ -157,14 +157,13 @@ const Sidebar = () => {
    }
   ];
 
-
   return (
-    <div className='px-6 w-60 overflow-y-scroll overflow-x-hidden h-[calc(100vh-6rem)] mt-16'>
+    <div className='px-6 w-95 overflow-y-scroll overflow-x-hidden h-[calc(100vh-6rem)] mt-16'>
       <div className='items-center space-y-2 mb-2'>  
 
         {sidebaritems.map((item) => {
           return (
-            <div className='flex items-center space-x-5 font-semibold rounded-xl hover:bg-gray-300 p-1'>
+            <div key = {item.id} className='flex items-center space-x-5 font-semibold rounded-xl hover:bg-gray-300 p-1'>
               <div className='text-xl cursor-pointer'> {item.icon} </div>
               <span className='cursor-pointer'>{item.name}</span>
             </div>
@@ -180,7 +179,7 @@ const Sidebar = () => {
         </div>
         {sidebaritems2.map((item) => {
           return (
-            <div className='flex items-center space-x-5 font-semibold rounded-xl hover:bg-gray-300 p-1'>
+            <div key = {item.id} className='flex items-center space-x-5 font-semibold rounded-xl hover:bg-gray-300 p-1'>
               <div className='text-xl cursor-pointer'> {item.icon} </div>
               <span className='cursor-pointer'>{item.name}</span>
             </div>
@@ -195,7 +194,7 @@ const Sidebar = () => {
         </div> 
         {sidebaritems3.map((item) => {
           return (
-            <div className='flex items-center space-x-5 font-semibold rounded-xl hover:bg-gray-300 p-1'>
+            <div key = {item.id} className='flex items-center space-x-5 font-semibold rounded-xl hover:bg-gray-300 p-1'>
               <div className='text-xl cursor-pointer'> {item.icon} </div>
               <span className='cursor-pointer'>{item.name}</span>
             </div>
@@ -210,7 +209,7 @@ const Sidebar = () => {
         </div> 
         {sidebaritems4.map((item) => {
           return (
-            <div className='flex items-center space-x-5 font-semibold rounded-xl hover:bg-gray-300 p-1'>
+            <div key = {item.id} className='flex items-center space-x-5 font-semibold rounded-xl hover:bg-gray-300 p-1'>
               <div className='text-xl cursor-pointer text-red-600'> {item.icon} </div>
               <span className='cursor-pointer'>{item.name}</span>
             </div>
@@ -222,9 +221,9 @@ const Sidebar = () => {
        <div className='items-center space-y-2 mb-2 mt-2'> 
         {sidebaritems5.map((item) => {
           return (
-            <div className='flex items-center space-x-5 font-semibold rounded-xl hover:bg-gray-300 p-1'>
+            <div key = {item.id} className='flex items-center space-x-5 font-semibold rounded-xl hover:bg-gray-300 p-1'>
               <div className='text-xl cursor-pointer font-bold'> {item.icon} </div>
-              <span className='cursor-pointer'>{item.name}</span>
+              <span className='cursor-pointer text-sm'>{item.name}</span>
             </div>
           );
         })}
