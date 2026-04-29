@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Time from '../loader/Time'
 import { SiTicktick } from "react-icons/si";
+import { abbreviateNumber } from 'js-abbreviation-number';
 
 const Video = ({video}) => {
   return (
@@ -24,9 +25,10 @@ const Video = ({video}) => {
                         {video?.author?.title}
                         {video?.author?.badges[0]?.type === 'VERIFIED_CHANNEL' && <SiTicktick className='text-sm bg-gray-200 rounded-full'/>}
                     </span>
-                    <div>
-                        <p>{video?.stats?.views}</p>
-                        <p></p>
+                    <div className='flex space-x-2'>
+                        <p>{`${abbreviateNumber(video?.stats?.views,2)} views`}</p>
+                        <p className='text-3xl mt-[-14px]'>.</p>
+                        <p>{video?.publishedTimeText}</p>
                     </div>
                 </div>
             </div>
