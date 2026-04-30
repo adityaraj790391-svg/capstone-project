@@ -48,6 +48,7 @@ function PlayingVideo() {
               controls
               style={{ backgroundColor: "#000000" }}
               playing={true}
+              muted={true}
             />
           </div>
           <div className="font-bold text-sm md:text-xl mt-4 line-clamp-2">
