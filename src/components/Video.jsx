@@ -27,7 +27,7 @@ const Video = ({video}) => {
                     </span>
                     <div className='flex space-x-2'>
                         <p>{`${abbreviateNumber(video?.stats?.views,2)} views`}</p>
-                        <p className='text-3xl mt-[-14px]'>.</p>
+                        <p className='text-3xl -mt-3.5'>.</p>
                         <p>{video?.publishedTimeText}</p>
                     </div>
                 </div>
