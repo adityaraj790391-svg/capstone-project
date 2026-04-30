@@ -11,11 +11,23 @@ const options = {
 	}
 }; 
 
-export const fetchData = async(url) => {
+// In-memory cache to store API responses
+const cache = {};
+
+export const fetchData = async (url) => {
+    // If the data is already in the cache, return it immediately
+    if (cache[url]) {
+        console.log(`Serving from cache: ${url}`);
+        return cache[url];
+    }
+
     try {
-	const {data} = await axios.get(`${BASE_URL}/${url}`,options);
-	return data
-} catch (error) {
-	console.error('error fetching data', error);
-    throw error
-}}
+        const { data } = await axios.get(`${BASE_URL}/${url}`, options);
+        // Save the successful response to the cache
+        cache[url] = data;
+        return data;
+    } catch (error) {
+        console.error('error fetching data', error);
+        throw error;
+    }
+};
