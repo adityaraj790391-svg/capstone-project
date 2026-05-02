@@ -32,7 +32,7 @@ const Navbar = () => {
           <div className='w-full border rounded-l-full px-3 py-2'>
             <input className='w-full h-full outline-none py-2 px-2' type='text' placeholder='Search' onChange={(e) => setsearchquery(e.target.value)} onKeyDown={searchqueryhandler} value={searchquery}></input>
           </div>
-          <button className='px-4 py-2 border bg-gray-200 rounded-r-full cursor-pointer hover:bg-gray-200 h-full' onClick={() => searchqueryhandler ('Search button')}><CiSearch /></button>
+          <button className='px-4 py-2 border bg-gray-200 rounded-r-full cursor-pointer hover:bg-gray-200 h-full' onClick={() => searchqueryhandler ('searchbutton')}><CiSearch /></button>
           <div>
             <button className='border h-full ml-3 p-2 cursor-pointer rounded-full text-2xl hover:bg-gray-200'><PiMicrophone /></button>
           </div>

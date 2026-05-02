@@ -23,7 +23,7 @@ const Search = () => {
 
   return (
     <div>
-      <div className='flex flex-row mt-24 h-[calc()100%-56px]'>
+      <div className='flex flex-row mt-24 h-[calc(100%-56px)]'>
         <Sidebar />
         <div className='h-[calc(100vh-30px)] overflow-y-scroll overflow-x-hidden'>
           <div className='grid grid-cols-1 gap-2 p-2'>
