@@ -14,7 +14,7 @@ const Navbar = () => {
   const [searchquery, setsearchquery] = useState('')
   const navigate = useNavigate()
 
-  const searchqueryhandler = () => {
+  const searchqueryhandler = (event) => {
     if((event?.key==='Enter' || event === 'searchbutton') && searchquery?.length > 0 ) {
       navigate(`/search/${searchquery}`);
       setsearchquery('');
@@ -30,7 +30,7 @@ const Navbar = () => {
 
         <div className='flex h-11 w-[39%]'>
           <div className='w-full border rounded-l-full px-3 py-2'>
-            <input className='w-full h-full outline-none py-2 px-2' type='text' placeholder='Search' onChange={(e) => (e.target.value)} onKeyDown={searchqueryhandler} value={searchquery}></input>
+            <input className='w-full h-full outline-none py-2 px-2' type='text' placeholder='Search' onChange={(e) => setsearchquery(e.target.value)} onKeyDown={searchqueryhandler} value={searchquery}></input>
           </div>
           <button className='px-4 py-2 border bg-gray-200 rounded-r-full cursor-pointer hover:bg-gray-200 h-full' onClick={() => searchqueryhandler ('Search button')}><CiSearch /></button>
           <div>

@@ -40,7 +40,7 @@ function PlayingVideo() {
     <div className=" flex justify-center flex-row h-[calc(100%-56px)] mt-16">
       <div className="w-full max-w-395 flex flex-col lg:flex-row">
         <div className="flex flex-col lg:w-[calc(100%-350px)] xl:w-[100%-400px] px-4 py-3 lg:py-6">
-          <div className="h-50 md:h-175 -ml-4 -mr-4 lg:ml-0 lg:mr-0">
+          <div className="h-52 md:h-[700px] ml-[-16px] mr-[-16px] lg:ml-0 lg:mr-0 ">
             <ReactPlayer
               url={`https://www.youtube.com/watch?v=${id}`}
               height="100%"
@@ -48,7 +48,6 @@ function PlayingVideo() {
               controls
               style={{ backgroundColor: "#000000" }}
               playing={true}
-              muted={true}
             />
           </div>
           <div className="font-bold text-sm md:text-xl mt-4 line-clamp-2">
